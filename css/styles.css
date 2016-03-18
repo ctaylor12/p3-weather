@@ -3,3 +3,9 @@ body {
     background-image: url('../img/tallWeather.png');
     
 }
+
+h1 {
+    
+    font-family: 'Open Sans Condensed', sans-serif;
+    
+}
