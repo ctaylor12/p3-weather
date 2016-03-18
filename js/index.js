@@ -11,7 +11,7 @@ $.simpleWeather({
     success: function(weather) {
       
       // Display Data
-      $('.temp').text(weather.temp);
+      $('.temp').text(weather.temp + "F");
       $('.city').text(weather.city);
     
       // Entire weather object
