@@ -2,7 +2,7 @@
 // https://cdnjs.cloudflare.com/ajax/libs/jquery.simpleWeather/3.1.0/jquery.simpleWeather.min.js
 // Refer: http://simpleweatherjs.com
 
-var newCity = prompt();
+var newCity = prompt("How's the weather up there in:");
 
 $.simpleWeather({
     location: newCity,
@@ -11,8 +11,14 @@ $.simpleWeather({
     success: function(weather) {
       
       // Display Data
-      $('.temp').text(weather.temp + "F");
-      $('.city').text(weather.city);
+//      $('.temp').text(weather.temp + "F");
+        $('.type-it').typeIt({
+            strings: [weather.temp + "F", weather.city],
+            speed: 500,
+            lifeLike: false,
+            cursor: false
+          });
+//      $('.city').text(weather.city);
     
       // Entire weather object
       console.log();
